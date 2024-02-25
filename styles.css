@@ -1,0 +1,14 @@
+.memory-grid {
+  justify-self: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 4;
+  width: 80vw;
+}
+
+.memory-card {
+  width: 50%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  margin: 10px;
+}
