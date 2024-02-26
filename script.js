@@ -18,6 +18,7 @@ let allImages = [
 let firstImage;
 let secondImage;
 let score = 0;
+let tries = 0;
 let lockBoard = false;
 
 // function to select 8 (could be gameplay variable) random images from list of images
@@ -73,11 +74,15 @@ function flipCard() {
     firstImage = this;
     this.classList.add("flipped");
     this.src = `./assets/img/${this.dataset.id}`;
+    tries += 1;
+    console.log(tries);
   } else if (firstImage && !secondImage) {
     // setting image, adding flipped to list, rendering image from dataset and calling checkForMatch function
     secondImage = this;
     this.src = `./assets/img/${this.dataset.id}`;
     this.classList.add("flipped");
+    tries += 1;
+    console.log(tries);
     checkForMatch();
   }
 }
@@ -89,7 +94,7 @@ function checkForMatch() {
     scoreP.innerText = `${score}`;
     if (score === selectedImages.length) {
       setTimeout(() => {
-        alert("Congratulations! You won!");
+        alert(`Congratulations! You won! It took you ${tries} tries`);
       }, 500);
     }
     // afterwards resetBoard for next game

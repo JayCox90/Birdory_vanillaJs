@@ -30,6 +30,8 @@ body {
   aspect-ratio: 1;
   overflow: hidden;
   margin: 10px;
+  border: 5px solid rgb(12, 30, 16);
+  border-radius: 10px;
 }
 
 .scores {
