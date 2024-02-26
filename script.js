@@ -74,15 +74,16 @@ function flipCard() {
     firstImage = this;
     this.classList.add("flipped");
     this.src = `./assets/img/${this.dataset.id}`;
+
     tries += 1;
-    console.log(tries);
   } else if (firstImage && !secondImage) {
     // setting image, adding flipped to list, rendering image from dataset and calling checkForMatch function
     secondImage = this;
     this.src = `./assets/img/${this.dataset.id}`;
     this.classList.add("flipped");
+
     tries += 1;
-    console.log(tries);
+
     checkForMatch();
   }
 }
@@ -97,7 +98,7 @@ function checkForMatch() {
         alert(`Congratulations! You won! It took you ${tries} tries`);
       }, 500);
     }
-    // afterwards resetBoard for next game
+    // afterwards resetBoard for next round
     resetBoard();
     return;
   } else {
