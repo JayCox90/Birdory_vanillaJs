@@ -1,13 +1,32 @@
+body {
+  margin: 10x;
+  padding: 0;
+  background-image: url(./assets/img/Forrest_Background.jpg);
+  background-size: cover;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 1130px) {
+    background-size: auto;
+    background-position: center;
+  }
+}
+
+.grid-placer {
+  display: flex;
+  justify-content: center;
+}
 .memory-grid {
-  justify-self: center;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 4;
-  width: 80vw;
+  width: 50vw;
 }
 
 .memory-card {
-  width: 50%;
+  width: 75%;
   aspect-ratio: 1;
   overflow: hidden;
   margin: 10px;
@@ -15,7 +34,15 @@
 
 .scores {
   display: flex;
+  justify-content: center;
+  color: white;
+  background-color: black;
+  padding: 8px;
+  border-radius: 10px;
+  width: 10vw;
   p {
     margin: 5px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
   }
 }
