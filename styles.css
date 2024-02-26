@@ -12,3 +12,10 @@
   overflow: hidden;
   margin: 10px;
 }
+
+.scores {
+  display: flex;
+  p {
+    margin: 5px;
+  }
+}
